@@ -102,7 +102,7 @@ public class DiceGame {
             currentRound++;
         }
 
-        out.getOutput("GAME OVER");
+        out.output("GAME OVER");
 //        logger.info("Game end");
     }
 
@@ -115,7 +115,7 @@ public class DiceGame {
                 report += "  " + player.toString() + "\n";
             }
         }
-        out.getOutput(report);
+        out.output(report);
     }
 
     private boolean rollDice() {
@@ -127,7 +127,7 @@ public class DiceGame {
 
         String outcome = "Roll was " + die1 + ", " + die2;
 
-        out.getOutput(outcome + (even ? "\nPlayers WIN!" : "\nPlayers LOSE!"));
+        out.output(outcome + (even ? "\nPlayers WIN!" : "\nPlayers LOSE!"));
 
 //        logger.info(outcome);
 

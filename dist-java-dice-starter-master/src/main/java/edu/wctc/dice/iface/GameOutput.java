@@ -1,5 +1,5 @@
 package edu.wctc.dice.iface;
 
 public interface GameOutput {
-    void getOutput(String prompt);
+    void output(String text);
 }

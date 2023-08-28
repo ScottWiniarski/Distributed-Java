@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 public class ConsoleOutput implements GameOutput {
-    public void getOutput(String text) {
+    public void output(String text) {
         System.out.println(text);
     }
 }
