@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@ComponentScan("edu.wctc.sales")
+@ComponentScan("edu.wctc.impl.sales")
 public class AppConfig {
     @Bean
     public SalesInput salesInput(){

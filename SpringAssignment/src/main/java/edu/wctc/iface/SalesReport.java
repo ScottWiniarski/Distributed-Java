@@ -1,5 +1,5 @@
 package edu.wctc.iface;
-import edu.wctc.impl.Sale;
+import edu.wctc.Sale;
 
 import java.util.List;
 

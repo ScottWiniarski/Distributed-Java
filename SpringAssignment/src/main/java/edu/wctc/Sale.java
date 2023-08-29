@@ -1,4 +1,4 @@
-package edu.wctc.impl;
+package edu.wctc;
 
 public class Sale {
 
