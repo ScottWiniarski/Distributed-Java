@@ -3,8 +3,6 @@ package edu.wctc;
 public class Sale {
 
     private String salesText;
-
-
     public Sale(String text){
         this.salesText = text;
     }

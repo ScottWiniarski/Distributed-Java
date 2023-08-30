@@ -1,6 +1,7 @@
 package edu.wctc.impl;
 
 import edu.wctc.Sale;
+import edu.wctc.SalesList;
 import edu.wctc.iface.SalesReport;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.Objects;
 
 public class GenerateFocusedReport implements SalesReport {
     @Override
-    public void generateReport(List<Sale> salesList) {
+    public void generateReport() {
 
         // TODO Ask about making the below code more universial and flexible. I've looked up Mashmaps and Collections but I don't
         // TODO understand how to simplify the practice below.
@@ -31,7 +32,7 @@ public class GenerateFocusedReport implements SalesReport {
         double scotlandShipping = 0;
         double indiaShipping = 0;
 
-        for(Sale sales:salesList){
+        for(Sale sales: SalesList.getSalesList()){
             saleDetails = sales.getSalesText();
 
             String sections[] = saleDetails.split(",");

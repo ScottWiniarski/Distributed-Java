@@ -6,5 +6,5 @@ import java.util.List;
 import edu.wctc.Sale;
 
 public interface SalesInput {
-    List<Sale> getSales() throws FileNotFoundException;
+    void fillSales() throws FileNotFoundException;
 }

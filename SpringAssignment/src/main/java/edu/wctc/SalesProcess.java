@@ -5,6 +5,9 @@ import edu.wctc.iface.ShippingPolicy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.FileNotFoundException;
+import java.util.List;
+
 @Component
 public class SalesProcess {
     private SalesInput input;
@@ -21,11 +24,12 @@ public class SalesProcess {
     }
 
     // Can't call a non-static method from a static context
-    public void generateReport(){
+    public void generateReport() throws FileNotFoundException {
         System.out.println("Running Report");
-        //List<Sale> allSales = SalesInput.getSales();
-//        for(Sale aSale : allSales){
-//
+        input.fillSales();
+        report.generateReport();
+//        for(Sale aSale : SalesList.getSalesList()){
+//            //shippingPolicy.applyShipping(aSale);
 //        }
             //shippingPolicy.applyShipping(aSale);
         //salesReport.generateReport(allSales);

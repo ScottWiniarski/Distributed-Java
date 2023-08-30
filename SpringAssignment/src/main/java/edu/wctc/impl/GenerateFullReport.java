@@ -1,18 +1,19 @@
 package edu.wctc.impl;
 
 import edu.wctc.Sale;
+import edu.wctc.SalesList;
 import edu.wctc.iface.SalesReport;
 
 import java.util.List;
 
 public class GenerateFullReport implements SalesReport {
     @Override
-    public void generateReport(List<Sale> salesList) {
+    public void generateReport() {
         String saleDetails;
         System.out.println("SALES DETAIL REPORT:");
         System.out.println(" Customer " + " Country " + " Amount " + " Tax " + " Shipping");
         System.out.printf("%-10s %-8s %-8s %-8s %-8s", "Customer", "Country", "Amount", "Tax", "Shipping");
-        for (Sale sale : salesList) {
+        for (Sale sale : SalesList.getSalesList()) {
             saleDetails = sale.getSalesText();
 
             String sections[] = saleDetails.split(",");

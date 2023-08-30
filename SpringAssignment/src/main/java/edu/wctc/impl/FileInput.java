@@ -1,6 +1,7 @@
 package edu.wctc.impl;
 
 import edu.wctc.Sale;
+import edu.wctc.SalesList;
 import edu.wctc.iface.SalesInput;
 
 import java.io.File;
@@ -10,11 +11,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FileInput implements SalesInput {
-    List<Sale> fileText = new ArrayList<>();
+
     Sale tempSale = new Sale("");
 
     @Override
-    public List<Sale> getSales() throws FileNotFoundException {
+    public void fillSales() throws FileNotFoundException {
         try{
             File myObj = new File("sales.txt");
             Scanner myReader = new Scanner(myObj);
@@ -27,7 +28,7 @@ public class FileInput implements SalesInput {
                 tempSale.setSalesText(data);
                 System.out.println(tempSale);
 
-                fileText.add(tempSale);
+                SalesList.addSalesList(tempSale);
             }
             myReader.close();
         }
@@ -35,6 +36,5 @@ public class FileInput implements SalesInput {
             System.out.println("An error has occurred");
             e.printStackTrace();
         }
-        return fileText;
     }
 }
