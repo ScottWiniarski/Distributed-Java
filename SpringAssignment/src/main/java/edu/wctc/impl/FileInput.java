@@ -23,11 +23,8 @@ public class FileInput implements SalesInput {
             while(myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 System.out.println(data);
-
-
                 tempSale.setSalesText(data);
-                System.out.println(tempSale);
-
+                //System.out.println(tempSale);
                 SalesList.addSalesList(tempSale);
             }
             myReader.close();

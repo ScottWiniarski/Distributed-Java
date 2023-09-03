@@ -24,12 +24,6 @@ public class ApplyShipping implements ShippingPolicy {
 
         double shippingAmount = (sectionAmount * shippingFees);
 
-//        BigDecimal bd = BigDecimal.valueOf(shippingAmount);
-//        bd = bd.setScale(shippingAmount, RoundingMode.HALF_UP);
-
-        //creates shipping costs as a double then converts to string
-        //String section5 = String.format("%.2f" ,Double.toString( (sectionAmount * shippingFees)) ) ;
-
         String section5 = Double.toString(sectionAmount * shippingFees);
         //double newAmount = (sectionAmount += (sectionAmount * shippingFees));
 
@@ -39,7 +33,5 @@ public class ApplyShipping implements ShippingPolicy {
 
         String modifiedSale = String.join(",",sections) + ("," + section5);
         formattedSale.setSalesText(modifiedSale);
-
-
     }
 }

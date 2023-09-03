@@ -11,8 +11,8 @@ public class GenerateFullReport implements SalesReport {
     public void generateReport() {
         String saleDetails;
         System.out.println("SALES DETAIL REPORT:");
-        System.out.println(" Customer " + " Country " + " Amount " + " Tax " + " Shipping");
-        System.out.printf("%-10s %-8s %-8s %-8s %-8s", "Customer", "Country", "Amount", "Tax", "Shipping");
+        //System.out.println(" Customer " + " Country " + " Amount " + " Tax " + " Shipping");
+        System.out.printf("%-10s %-10s %-10s %-8s %-8s\n", "Customer", "Country", "Amount", "Tax", "Shipping");
         for (Sale sale : SalesList.getSalesList()) {
             saleDetails = sale.getSalesText();
 
@@ -21,11 +21,12 @@ public class GenerateFullReport implements SalesReport {
             String section2 = sections[1];
             String section3 = sections[2];
             String section4 = sections[3];
-            String section5 = sections[4];
+            //String section5 = sections[4];
 
             //String modifiedSection3 = String.format("%2f", section3);
 
-            System.out.printf("%-10s %-8s %-8s %-8s %-8s", section1, section2, section3, section4, section5);
+            //System.out.printf("%-10s %-8s %-8s %-8s %-8s", section1, section2, section3, section4, section5);
+            System.out.printf("%-10s %-10s %-10s %-8s\n", section1, section2, section3, section4 );
             //System.out.printf("%.2f%n", section3);
         }
     }

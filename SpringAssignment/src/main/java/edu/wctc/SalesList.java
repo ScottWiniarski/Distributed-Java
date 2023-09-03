@@ -2,6 +2,7 @@ package edu.wctc;
 
 import java.util.ArrayList;
 import java.util.List;
+import edu.wctc.Sale;
 
 public class SalesList {
     private static List<Sale> sales = new ArrayList<>();
