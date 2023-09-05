@@ -33,5 +33,6 @@ public class ApplyShipping implements ShippingPolicy {
 
         String modifiedSale = String.join(",",sections) + ("," + section5);
         formattedSale.setSalesText(modifiedSale);
+        System.out.println(modifiedSale);
     }
 }

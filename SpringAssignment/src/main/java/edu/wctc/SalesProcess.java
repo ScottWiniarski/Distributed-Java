@@ -25,9 +25,10 @@ public class SalesProcess {
         System.out.println("Running Report");
         input.fillSales();
         report.generateReport();
-//        for(Sale aSale : SalesList.getSalesList()){
-//            policy.applyShipping( aSale);
-//        }
+        for(Sale aSale : SalesList.getSalesList()){
+            policy.applyShipping( aSale);
+
+        }
             //shippingPolicy.applyShipping(aSale);
         //salesReport.generateReport(allSales);
     }
