@@ -11,4 +11,5 @@ public class MenuItem {
     private String description;
     private String imageFile;
     private double price;
+    private int rating;
 }
