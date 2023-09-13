@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/frags :: head(pageTitle='Know Your Fate')}"></head>
+<body>
+<div class="content">
+    <div class="content-inside">
+        <div th:replace="~{fragments/frags :: header}"></div>
+
+        <div th:replace="~{fragments/frags :: background}"></div>
+
+        <div class="horoscope" th:object="${hs}">
+            <!--<h1 th:text="'Daily Horoscope for ' + *{sign}">DAILY HOROSCOPE</h1>-->
+            <h1 th:text="|Daily Horoscope for *{sign}|">DAILY HOROSCOPE</h1>
+
+            <p th:text="*{horoscope}">HOROSCOPE</p>
+
+        </div>
+    </div>
+</div>
+<div th:replace="~{fragments/frags :: disclaimer}"></div>
+</body>
+</html>
