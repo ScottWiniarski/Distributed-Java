@@ -26,4 +26,6 @@ public class Squirrel {
     private String imageFileName;
     @Column(name="rating")
     private int rating;
+    @Column(name="life_span")
+    private int life_span;
 }

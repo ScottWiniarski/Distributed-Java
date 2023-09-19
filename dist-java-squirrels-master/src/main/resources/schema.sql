@@ -4,7 +4,8 @@ create table Squirrel (
       common_name varchar(200) not null,
       habitat varchar(200) not null,
       image_file_name varchar(200),
-      rating int not null default 0
+      rating int not null default 0,
+      life_span int not null
 );
 
 create table Location (

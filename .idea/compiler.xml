@@ -9,6 +9,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="get-fantastical" target="1.7" />
       <module name="high-fantasy" target="17" />
     </bytecodeTargetLevel>
   </component>
