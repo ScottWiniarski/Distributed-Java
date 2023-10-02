@@ -19,7 +19,7 @@
 
     function showTeamData(teamObject) {
         const paragraph = document.createElement("p");
-        const text = document.createTextNode(teamObject.teamName);
+        const text = document.createTextNode(teamObject.teamName + " " + teamObject.gameName);
         paragraph.appendChild(text);
         document.body.appendChild(paragraph);
     }
